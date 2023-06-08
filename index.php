@@ -1,20 +1,15 @@
-<!-- "Варіант 3" -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RentCars</title>
+    <title>Rent</title>
 </head>
 <body>
-
-
-
     <h2>Отриманий дохід з прокату станом на обрану дату</h2>
-    <form action="CostOfRent.php" method="post">
-        
-        <select name="CostOfRent">
+    <form action="rent.php" method="post">
+        <select name="rent">
             <?php
             include("connect.php");
             require_once("connect.php");
@@ -28,11 +23,9 @@
             <input type="submit" value="Результат">       
     </form>
 
-
-
     <h2>Автомобілі з пробігом, меншим за вказаний</h2>
-<form action="CarsMileage.php" method="post">
-    <select name="carBrands">
+<form action="mileage.php" method="post">
+    <select name="brands">
         <?php
         include("connect.php");
         require_once("connect.php");
@@ -45,12 +38,9 @@
     </select>
     <input type="submit" value="Результат">
 </form>
-
-
-
-<form action="AvailableCars.php" method="post">
+<form action="available.php" method="post">
     <h2>Наявні в цьому пункті марки автомобілів</h2>
-    <select name="id" id="id">
+    <select name="number" id="number">
         <?php
         include("connect.php");
         $collections = (new MongoDB\Client)->Lb6_Var6->cars;
